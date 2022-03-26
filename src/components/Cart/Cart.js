@@ -12,7 +12,6 @@ const Cart = ({ cart }) => {
 
         });
         setSelect(selectedProducts);
-        setChoosed([]);
     }, [cart]);
 
 
