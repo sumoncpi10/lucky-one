@@ -12,12 +12,14 @@ const Cart = ({ cart }) => {
 
         });
         setSelect(selectedProducts);
+        setChoosed([]);
     }, [cart]);
 
 
 
     let name = '';
     const ChoseBestOne = () => {
+        setSelect([]);
         selectedProducts = '';
         let best = cart[0].ratings;
         for (const product in cart) {
@@ -30,9 +32,10 @@ const Cart = ({ cart }) => {
         setChoosed(name);
     }
     const ChoseAgain = () => {
-        setSelect('');
+        cart = [];
+        setSelect([]);
 
-        setChoosed('');
+        setChoosed([]);
     }
 
     return (

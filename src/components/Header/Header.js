@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <div>
             <h1 className='text-primary'>Best One</h1>
-            <h3>Chose 4 Camera</h3>
+            <h3>Chose At Least 4 Camera</h3>
         </div>
     );
 };
