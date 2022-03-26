@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
 import Product from '../Product/Product';
+import Cart from '../Cart/Cart';
 
 
 const Shop = () => {
@@ -14,10 +14,10 @@ const Shop = () => {
             .then(data => setProducts(data))
     }, []);
     const handleAddToCart = (product) => {
-        console.log(product);
+        // console.log(product);
         const newCart = [...cart, product];
         setCart(newCart);
-        console.log(newCart);
+        // console.log(newCart);
     }
     return (
         <div className='container'>
@@ -34,11 +34,8 @@ const Shop = () => {
                 </div>
 
                 {/* cart section */}
-                <div className='cart-container col-md-3 '>
-                    <h2>Selected Cameras: {cart.length}</h2>
-                    <h1>Name: {cart.name}</h1>
-                    <button type="button " className="btn btn-primary mt-3">CHOOSE 1 FOR ME</button><br></br>
-                    <button type="button " className="btn btn-info m-3">CHOOSE AGAIN</button>
+                <div className='cart-container col-md-3 bg-warning '>
+                    <Cart cart={cart}></Cart>
                 </div>
             </div>
         </div>
